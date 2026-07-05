@@ -5,7 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import dados
 
-#base model tem como finalidade definir as estruturas desses dados.
+#Base model tem como finalidade definir as estruturas desses dados.
 class LivroEntrada(BaseModel):
     titulo:str
     autor:str
@@ -23,7 +23,7 @@ app.add_middleware(
 #Verificando se a API do servidor está funcionando
 @app.get('/')
 def home():
-    return {'mesnagem': 'API funcionando'}
+    return {'mensagem': 'API funcionando'}
 #Serve para verificart a rota livros e retornar la do arquivo dados a lista livros.
 @app.get('/livros')
 def livros():
@@ -40,7 +40,7 @@ def adcionar_livro(livro: LivroEntrada):
     }
     dados.livros.append(novos_livros)
     dados.proximo_id += 1
-    return novos_livros # Nesses casos sem o return o JS recebe NULL
+    return novos_livros #Nesses casos sem o return o JS recebe NULL
 
 @app.put('/livros/{id}')
 def marcar_lido(id: int):
