@@ -1,137 +1,27 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background: #f0f2f5;
-  color: #222;
-}
-
-#cabecalho {
-  background: #1a2235;
-  color: #fff;
-  padding: 18px 32px;
-  font-size: 1.3rem;
-  font-weight: bold;
-}
-
-#conteudo-principal {
-  display: flex;
-  gap: 24px;
-  padding: 32px;
-  align-items: flex-start;
-}
-
-#secao-formulario {
-  background: #fff;
-  border-radius: 8px;
-  padding: 24px;
-  width: 280px;
-}
-
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; background: #f0f2f5; color: #222; }
+#cabecalho { background: #1a2235; color: #fff; padding: 18px 32px; font-size: 1.3rem; font-weight: bold; }
+#conteudo-principal { display: flex; gap: 24px; padding: 32px; align-items: flex-start; }
+#secao-formulario { background: #fff; padding: 24px; width: 280px; }
 #secao-lista { flex: 1; }
-
-h2 {
-  font-size: 1rem;
-  margin-bottom: 16px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #e0e0e0;
-}
-
+h2 { font-size: 1rem; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid #e0e0e0; }
 .grupo-campo { margin-bottom: 14px; }
-
-.grupo-campo label {
-  display: block;
-  font-size: 0.85rem;
-  margin-bottom: 5px;
-}
-
-.grupo-campo input {
-  width: 100%;
-  padding: 9px 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  outline: none;
-}
-
-.grupo-campo input:focus { border-color: #1a6ef5; }
-
-#botao-adicionar {
-  width: 100%;
-  background: #1a6ef5;
-  color: #fff;
-  border: none;
-  padding: 10px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-#botao-adicionar:hover { background: #1558c0; }
-
-#mensagem-feedback {
-  margin-top: 12px;
-  font-size: 0.85rem;
-  font-weight: bold;
-  min-height: 18px;
-}
-
+.grupo-campo label { display: block; font-size: 0.85rem; margin-bottom: 5px; }
+.grupo-campo input { width: 100%; padding: 9px 12px; border: 1px solid #ccc; font-size: 0.9rem; outline: none; }
+#botao-adicionar { width: 100%; background: #1a6ef5; color: #fff; border: none; padding: 10px; cursor: pointer; }
+#mensagem-feedback { margin-top: 12px; font-size: 0.85rem; font-weight: bold; }
 #mensagem-feedback.erro { color: #cc0000; }
 #mensagem-feedback.sucesso { color: #1a8a3a; }
-
-#cabecalho-lista {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #fff;
-  padding: 14px 20px;
-  border-radius: 8px;
-  margin-bottom: 16px;
-}
-
+#cabecalho-lista { display: flex; justify-content: space-between; background: #fff; padding: 14px 20px; margin-bottom: 16px; }
 #cabecalho-lista h2 { border: none; margin: 0; padding: 0; }
-
-#contador-livros { font-size: 0.85rem; color: #666; }
-
-#lista-livros {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.card-livro {
-  background: #fff;
-  border-radius: 8px;
-  padding: 16px 20px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
+#lista-livros { display: flex; flex-direction: column; gap: 10px; }
+.card-livro { background: #fff; padding: 14px 20px; display: flex; align-items: center; gap: 16px; }
 .info-livro { flex: 1; }
 .titulo-livro { font-weight: bold; }
-.autor-livro { font-size: 0.85rem; color: #555; margin-top: 3px; }
-.ano-livro { font-size: 0.8rem; color: #888; margin-top: 2px; }
-
+.autor-livro { font-size: 0.85rem; color: #555; }
+.ano-livro { font-size: 0.8rem; color: #888; }
 .acoes-livro { display: flex; gap: 8px; }
-
-.botao-lido, .botao-remover {
-  background: #fff;
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-size: 0.8rem;
-  cursor: pointer;
-}
-
-.botao-lido { color: #1a8a3a; border: 1px solid #1a8a3a; }
-.botao-lido:hover { background: #1a8a3a; color: #fff; }
-
-.botao-remover { color: #cc0000; border: 1px solid #cc0000; }
-.botao-remover:hover { background: #cc0000; color: #fff; }
-
+.botao-lido { color: #1a8a3a; border: 1px solid #1a8a3a; padding: 6px 12px; font-size: 0.8rem; cursor: pointer; background: #fff; }
+.botao-remover { color: #cc0000; border: 1px solid #cc0000; padding: 6px 12px; font-size: 0.8rem; cursor: pointer; background: #fff; }
 .card-livro.lido .titulo-livro { text-decoration: line-through; color: #999; }
-.card-livro.lido .autor-livro,
-.card-livro.lido .ano-livro { color: #bbb; }
+.card-livro.lido .autor-livro, .card-livro.lido .ano-livro { color: #bbb; }
