@@ -25,3 +25,4 @@ h2 { font-size: 1rem; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 
 .botao-remover { color: #cc0000; border: 1px solid #cc0000; padding: 6px 12px; font-size: 0.8rem; cursor: pointer; background: #fff; }
 .card-livro.lido .titulo-livro { text-decoration: line-through; color: #999; }
 .card-livro.lido .autor-livro, .card-livro.lido .ano-livro { color: #bbb; }
+.card-livro.lido .titulo-livro { text-decoration: line-through; color: #999; }

@@ -34,6 +34,35 @@ function addLivros(cTitulo, cAutor, cAno) {
         })
 }
 
+function marcarLido(id){
+    fetch(URL + '/' + id, {
+        method: 'PUT'
+    })
+
+    .then(function(resposta){
+        return resposta.json();
+    })
+
+    .then(function(dados){
+        buscarLivros();
+    })
+}
+
+function removeLivro(id){
+
+    fetch(URL + '/' + id, {
+        method: 'DELETE'
+    })
+
+    .then(function(resposta){
+        return resposta.json();
+    })
+
+    .then(function(dados){
+        buscarLivros();
+    })
+}
+
 // Quando a página terminar de carregar, busca os livros automaticamente
 document.addEventListener('DOMContentLoaded', function() {
     buscarLivros();
@@ -47,6 +76,10 @@ function renderizar(dados) {
 
         const card = document.createElement('div');
         card.classList.add('card-livro');
+
+        if(livro.lido){
+            card.classList.add('lido');
+        }
 
         const info = document.createElement('div');
         info.classList.add('info-livro');
@@ -76,6 +109,8 @@ function renderizar(dados) {
         botaoLido.textContent = 'Marcar como lido';
         botaoLido.addEventListener('click', function() {
            
+           marcarLido(livro.id);
+
         })
         botoesLivro.appendChild(botaoLido);
 
@@ -83,7 +118,7 @@ function renderizar(dados) {
         botaoRemove.classList.add('botao-remover');
         botaoRemove.textContent = 'Remover';
         botaoRemove.addEventListener('click', function() {
-            
+            removeLivro(livro.id);
         });
         botoesLivro.appendChild(botaoRemove);
 
