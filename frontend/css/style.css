@@ -1,6 +1,6 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: Arial, sans-serif; background: #f0f2f5; color: #222; }
-#cabecalho { background: #1a2235; color: #fff; padding: 18px 32px; font-size: 1.3rem; font-weight: bold; }
+body { font-family: Arial, sans-serif; background: #f0f2f5; color: #101e47; }
+#cabecalho { background: #240582; color: #fff; padding: 18px 32px; font-size: 1.3rem; font-weight: bold; }
 #conteudo-principal { display: flex; gap: 24px; padding: 32px; align-items: flex-start; }
 #secao-formulario { background: #fff; padding: 24px; width: 280px; }
 #secao-lista { flex: 1; }
