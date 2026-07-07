@@ -1,10 +1,10 @@
-# BookShelf API 📚
+# GERENCIAMENTO DE BIBLIOTECA 📚
 
 Sistema de gerenciamento de biblioteca pessoal com backend em **Python (FastAPI)** e frontend em **JavaScript puro**.
 
 ## 🛠️ Tecnologias
 
-- **Python** + **FastAPI** — API REST com 4 rotas (CRUD completo)
+- **Python** + **FastAPI** — API REST com CRUD completo
 - **JavaScript (Vanilla)** — frontend consumindo a API via `fetch`
 - **HTML5** + **CSS3** — interface simples e funcional
 
@@ -12,10 +12,10 @@ Sistema de gerenciamento de biblioteca pessoal com backend em **Python (FastAPI)
 
 - ✅ Listar todos os livros (GET)
 - ✅ Adicionar livro pelo formulário (POST)
+- ✅ Marcar/desmarcar como lido — risca o título (PUT)
+- ✅ Remover livro da lista (DELETE)
 - ✅ Renderização dinâmica dos cards via JS
 - ✅ Contador de livros atualizado em tempo real
-- 🚧 Marcar/desmarcar como lido (PUT — em desenvolvimento)
-- 🚧 Remover livro da lista (DELETE — em desenvolvimento)
 
 ## 📁 Estrutura
 
@@ -35,7 +35,7 @@ bookshelf-api/
 **Backend:**
 ```bash
 cd backend
-python -m uvicorn app:app --reload
+python3 -m uvicorn app:app --reload
 ```
 
 **Frontend:**
@@ -57,15 +57,12 @@ http://localhost:8000/docs
 
 ## 💡 O que pratiquei com este projeto
 
-- API REST com FastAPI e Pydantic
+- API REST com FastAPI e Pydantic (validação automática de dados)
 - CORS — comunicação entre origens diferentes
-- `fetch` com GET e POST no frontend
+- `fetch` com GET, POST, PUT e DELETE no frontend
 - Renderização dinâmica de elementos via JS (`createElement`, `appendChild`)
 - Comunicação real entre frontend JS e backend Python
-
-## 🚧 Status
-
-Em desenvolvimento — GET e POST funcionando. Faltam: lógica de PUT (marcar como lido) e DELETE (remover) no frontend.
+- Separação de responsabilidades: `dados.py` (armazenamento) e `app.py` (rotas)
 
 ---
 
